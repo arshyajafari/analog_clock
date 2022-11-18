@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "digital-7";
+  src: local("digital-7"), url(./fonts/digital-7.ttf) format("truetype");
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #282828;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  width: 350px;
+  height: 350px;
+  background-image: url(./img/clock.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid #e2b00c;
+  border-radius: 100%;
+}
+
+.clock::before {
+  width: 15px;
+  height: 15px;
+  background-color: #e2b00c;
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  z-index: 999;
+}
+
+.clock .hour,
+.clock .minute,
+.clock .second {
+  position: absolute;
+}
+
+.clock .hour,
+.hr {
+  width: 154px;
+  height: 154px;
+}
+
+.clock .minute,
+.min {
+  width: 205px;
+  height: 205px;
+}
+
+.clock .second,
+.sec {
+  width: 235px;
+  height: 235px;
+}
+
+.hr,
+.min,
+.sec {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 100%;
+}
+
+.hr::before {
+  width: 7px;
+  height: 70px;
+  background-color: #e2b00c;
+  content: "";
+  position: absolute;
+  border-radius: 6px 6px 0px 0px;
+  z-index: 9;
+}
+
+.min::before {
+  width: 5px;
+  height: 95px;
+  background-color: #e2b00c;
+  content: "";
+  position: absolute;
+  border-radius: 6px 6px 0px 0px;
+  z-index: 10;
+}
+
+.sec::before {
+  width: 3px;
+  height: 150px;
+  background-color: #ff2010d2;
+  content: "";
+  position: absolute;
+  border-radius: 6px 6px 0px 0px;
+  z-index: 11;
+}
+
+.digital {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#digi-clock {
+  width: 95px;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "digital-7";
+  font-size: 30px;
+  text-align: center;
+  border-top: 2px solid rgb(179, 179, 179);
+  border-bottom: 2px solid rgb(179, 179, 179);
+  border-left: 2px solid rgb(179, 179, 179);
+  border-radius: 4px 0px 0px 4px;
+  margin: 140px 0px 0px 0px;
+  padding: 0px;
+}
+
+.date {
+  width: 40px;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "digital-7";
+  font-size: 30px;
+  text-align: center;
+  border: 2px solid rgb(179, 179, 179);
+  border-radius: 0px 4px 4px 0px;
+  margin: 140px 0px 0px 0px;
+  padding: 0px;
+}
